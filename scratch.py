@@ -1,3 +1,12 @@
-a = [1]
+from subprocess import call, Popen, PIPE
+import platform
+import chardet
 
-if a[1]: print(a)
+
+COMMAND = 'cmd.exe' if platform.system().lower() == 'windows' else 'ls'
+
+# мы не знаем в чем нужно декодировать
+# но нам помогает модуль chardet
+PROC = Popen(COMMAND)
+
+
