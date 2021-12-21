@@ -47,7 +47,7 @@ def host_range_ping_tab(ip_range):
     return reachable_list, unreachable_list
 
 
-
+ 
 
 
 if __name__ == "__main__":
